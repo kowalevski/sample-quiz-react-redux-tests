@@ -1,14 +1,17 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+import { Grommet, Box, Form, FormField, Button } from "grommet";
 import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Simple Notes App</h1>
-      </header>
-    </div>
+    <Grommet full={true}>
+      <Box fill={true} background="dark-1" align="center" justify="center">
+        <Form>
+          <FormField name="name" label="Name" />
+          <Button type="submit" primary label="Submit" color="brand" />
+        </Form>
+      </Box>
+    </Grommet>
   );
 }
 
