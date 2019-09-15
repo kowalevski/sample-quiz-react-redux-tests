@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Form, FormField, Button } from "grommet";
+import { Box, Form, Button, TextInput } from "grommet";
 import { NoteType } from "./types";
 import Note from "./Note";
 import { STORAGE_NOTES_KEY } from "./constants";
@@ -61,13 +61,16 @@ class ControlPanel extends React.Component<{}, State> {
           ))}
         </Box>
         <Form>
-          <FormField
+          <TextInput
+            data-test-id="Field.Note"
             name="text"
-            label="Note"
+            placeholder="Enter a Note..."
             onChange={({ target }) => this.setState({ text: target.value })}
             value={text}
           />
+          <br />
           <Button
+            data-test-id="Button.Submit"
             type="submit"
             primary
             label="Submit"
@@ -76,6 +79,7 @@ class ControlPanel extends React.Component<{}, State> {
             margin="xsmall"
           />
           <Button
+            data-test-id="Button.Clear"
             label="Clear"
             color="dark-3"
             onClick={this.handleClear}
