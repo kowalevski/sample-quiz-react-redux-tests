@@ -4,6 +4,8 @@ import styled from "styled-components";
 import { Box } from "grommet";
 
 const StyledNavLink = styled.div`
+  text-align: center;
+
   a {
     color: #b3b1b1;
     text-decoration: none;
