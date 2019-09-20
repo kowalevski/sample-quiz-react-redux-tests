@@ -8,7 +8,11 @@ const Memorize: React.FC = () => (
     <p>kind of Anki</p>
     <DeckList />
     <br />
-    <NavLink to="/deck-control" label="🗃️ Deck Control" />
+    <NavLink
+      data-test-id="Navigation.Deck.Control"
+      to="/deck-control"
+      label="🗃️ Create a new deck"
+    />
     <NavLink to="/" label="🏠 Home" />
   </>
 );
