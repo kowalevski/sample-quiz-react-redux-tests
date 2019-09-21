@@ -12,12 +12,12 @@ type DispatchProps = {
 
 type Props = {} & DispatchProps;
 
-type State = {
+export type State = {
   title: string;
   cards: Card[];
 };
 
-class DeckControl extends React.Component<Props, State> {
+export class DeckControl extends React.Component<Props, State> {
   state: State = {
     title: "",
     cards: []

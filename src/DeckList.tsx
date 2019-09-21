@@ -31,7 +31,7 @@ const DeckLink = styled.div`
   }
 `;
 
-class DeckList extends React.Component<Props> {
+export class DeckList extends React.Component<Props> {
   componentDidMount() {
     const { loadDecks, decks } = this.props;
 
@@ -50,6 +50,7 @@ class DeckList extends React.Component<Props> {
         <h3>Decks</h3>
         {decks.map(deck => (
           <Box
+            data-test-id="DeckList.Deck"
             key={deck.id}
             background="dark-2"
             margin="xsmall"
